@@ -1,3 +1,4 @@
+#pragma GCC optimize(3)
 #include <cstdio>
 #include <cstring>
 #include <cmath>
@@ -19,7 +20,6 @@
 #define mem(ar,num) memset(ar,num,sizeof(ar))
 #define me(ar) memset(ar,0,sizeof(ar))
 #define lowbit(x) (x&(-x))
-using namespace std;
 typedef long long LL;
 typedef unsigned long long ULL;
 const int    prime = 999983;
@@ -37,8 +37,9 @@ int main(void)
 	//	freopen("in.txt", "r", stdin);
 	//	freopen("out.txt", "w", stdout);
 	//#endif
-    //dtd::ios::sync_with_stdio(false);
-	//cin.tie(nullptr);
+	//cin/cout解绑后无法使用scanf/printf
+    std::ios::sync_with_stdio(false);
+	std::cin.tie(nullptr);
     //cin.get();
     //cin.get();
     return 0;
