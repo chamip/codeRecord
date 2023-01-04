@@ -1,9 +1,9 @@
 /*
  * @Author: chamip
  * @Date: 2022-04-15 16:24:52
- * @LastEditTime: 2022-04-15 16:41:50
+ * @LastEditTime: 2023-01-04 23:32:11
  * @LastEditors: chamip
- * @FilePath: /vscCpp/hackrank/hotelApartment.cpp
+ * @FilePath: /codeRecord/hackrank/hotelApartment.cpp
  */
 #include <iostream>
 #include <vector>
@@ -52,6 +52,7 @@ int main() {
     int total_profit = 0;
     for (auto room : rooms) {
         total_profit += room->get_price();
+        //cout << total_profit << endl;
     }
     cout << total_profit << endl;
 
