@@ -27,7 +27,7 @@ class BadLengthException {
 };
 
 bool checkUsername(string username) {
-	bool isValid = true;
+	bool isValid = true;p
 	int n = username.length();
 	if(n < 5) {
 		throw BadLengthException(n);
