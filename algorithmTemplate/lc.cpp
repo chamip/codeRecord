@@ -4,8 +4,11 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	int n;
-	cin >> n;
-	cout << n * n << endl << "hello, world!" << endl;
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    Solution *s = new Solution();
+    
+    
 	return 0;
 }
