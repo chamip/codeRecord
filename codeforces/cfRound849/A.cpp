@@ -17,6 +17,7 @@
 #include <algorithm>
 #include <numeric>
 #include <functional>
+#include <unordered_set>
 #define mem(ar,num) memset(ar,num,sizeof(ar))
 #define me(ar) memset(ar,0,sizeof(ar))
 #define lowbit(x) (x&(-x))
@@ -31,10 +32,15 @@ const double eps = 1e-6;
 const LL     mod = 1e9 + 7;
 
 int t;
-int n;
+//codefrs
+std::unordered_set<int> usi {'c', 'o' , 'd', 'e', 'f', 'r', 's'};
 
 void solve() {
-
+    char ch;
+    std::cin >> ch;
+    if (usi.count(ch)) std::cout << "YES" << std::endl;
+    else std::cout << "NO" << std::endl;
+    return ;
 }
 
 int main(void)
@@ -47,9 +53,9 @@ int main(void)
 	//cin/cout解绑后无法使用scanf/printf
     std::ios::sync_with_stdio(false);
 	std::cin.tie(nullptr);
-	std::cin >> t;
-	while (t--) {
-		solve();
-	}
+    std::cin >> t;
+    while (t--) {
+      solve();
+    }
     return 0;
 }

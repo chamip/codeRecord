@@ -36,22 +36,38 @@ typedef long long LL;
 const LL     mod = 1e9 + 7;
 const int    NUM = 2e5 + 10;
 
-void fileIO() {   
-#ifndef ONLINE_JUDGE
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-#endif
-}
-
 int t;
 
 void solve() {
-    
+    int n;
+    std::cin >> n;
+    std::vector<int> v(n);
+    LL res = 0;
+    int neg = 0;
+    for (int i = 0; i < n; ++i) {
+        std::cin >> v[i];
+        if (v[i] < 0) {
+            ++neg;
+            v[i] = -v[i];
+        }
+        res += v[i];
+    }
+    if (neg % 2 == 1) {
+        int small = *min_element(all(v));
+        res -= small * 2;
+    }
+    std::cout << res << std::endl;
     return ;
 }
 
 int main(void)
 {
+    //#ifdef ONLINE_JUDGE
+	//#else
+	//	freopen("in.txt", "r", stdin);
+	//	freopen("out.txt", "w", stdout);
+	//#endif
+	//cin/cout解绑后无法使用scanf/printf
     std::ios::sync_with_stdio(false);
 	std::cin.tie(nullptr);
     std::cin >> t;

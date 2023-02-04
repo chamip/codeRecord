@@ -8,7 +8,7 @@ public:
         int res = 0;
         int flag = 1;
         while (n >= 4) {
-            res += flag * (n * (n - 1) / (n - 2)) + (n - 3);
+            res += flag * (n * (n - 1) / (n - 2) + (n - 3));
             if (flag == 1) flag = -1;
             n -= 4;
         }

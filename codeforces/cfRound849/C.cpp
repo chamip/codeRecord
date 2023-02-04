@@ -31,10 +31,25 @@ const double eps = 1e-6;
 const LL     mod = 1e9 + 7;
 
 int t;
-int n;
 
 void solve() {
-
+    int n;
+    std::cin >> n;
+    std::string s;
+    std::cin >> s;
+    int res = n;
+    int left = 0, right = n - 1;
+    while (left < right) {
+        if (s[left] != s[right]) {
+            ++left;
+            --right;
+            res -= 2;
+        } else {
+            break;
+        }
+    }
+    std::cout << res << std::endl;
+    return ;
 }
 
 int main(void)
@@ -47,9 +62,9 @@ int main(void)
 	//cin/cout解绑后无法使用scanf/printf
     std::ios::sync_with_stdio(false);
 	std::cin.tie(nullptr);
-	std::cin >> t;
-	while (t--) {
-		solve();
-	}
+    std::cin >> t;
+    while (t--) {
+      solve();
+    }
     return 0;
 }
