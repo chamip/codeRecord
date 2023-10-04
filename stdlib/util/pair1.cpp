@@ -13,7 +13,7 @@ class Foo {
         cout << "Foo::Foo(args...)" << endl;
     }
 };
-
+  
 int main()
 {
     // create tuple t:
@@ -22,6 +22,8 @@ int main()
     // pass the tuple as a whole to the constructor of Foo:
     pair<int,Foo> p1 (42, t);
 
+    //auto t1 = std::make_tuple(1, 2, 3);
+    
     // pass the elements of the tuple to the constructor of Foo:
     pair<int,Foo> p2 (piecewise_construct, make_tuple(42), t);
 }
