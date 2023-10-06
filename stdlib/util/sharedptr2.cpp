@@ -32,4 +32,5 @@ int main()
     std::cout << "!!!!!" << std::endl;
 
     //TODO: why call destructor 7 times.
+    //notes: Maybe there're some default constructors being called.
 }
