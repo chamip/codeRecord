@@ -1,0 +1,5 @@
+*
+!.gitignore
+!*.cpp
+!*.py
+# 忽略除了.cpp和.py以外的所有文件
